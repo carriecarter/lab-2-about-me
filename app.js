@@ -1,12 +1,14 @@
 'use strict'
 
 function projects(){
+    var correctCount = 0; 
+
     // Yes No Question 1
     var logo = prompt('Do you think I designed the Next Adventure logo?');
     console.log('Did I design the Next Adventure logo?', logo);
 
     var p = document.getElementById('logo-response');
-    var correctCount = 0; 
+    
 
     if(logo.trim().toLowerCase() === 'no') {
         p.textContent = 'Correct, I did not design the Next Adventure logo, but it sure is nice!';
@@ -67,18 +69,27 @@ function projects(){
         p.textContent = 'You got me. I am a fan, but did not design that shoe.';
         correctCount++
     }
-    p.textContent = 'Welp. You only got ' + correctCount + ' right';
+    p.textContent = 'You got ' + correctCount + ' out of 5 right';
 }
-
-    var totalGuesses = 3;
-
-function favoriteProject(){
-    var favoriteProject = prompt('Which project do you think was my favorite to work on? Cat Lady Monument, Letterpress Poster, or Lobby Chair?');
-    console.log('User guess of my favorite project', favoriteProject);
-
-    var p = document.getElementById('favorite-guess');
-
+// Start of Guessing Game
     
+function favoriteProject(){
+    
+    }
 
+    while(guesses > 0) {
+         prompt('Which project do you think was my favorite to work on? Cat Lady Monument, Letterpress Poster, or Lobby Chair?');
+         console.log('guess one is' + guesses);
+    
+    if(guess1.trim().toLowerCase() === 'Cat Lady Monument' || guess1.trim().toLowerCase() === 'Cat Lady') {
+    
+        confirm('You know me well. Who doesn\'t love controversial public art? Especially when it is about cats.');
+        guessCorrect();
+        break;
+    }
+    else {
+        guesses--;
+        confirm('Nope. Sorry, that was not my favorite project. You have ' + guesses + ' left');
+        guessWrong();
+    }
 }
-
