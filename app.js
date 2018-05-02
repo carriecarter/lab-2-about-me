@@ -70,5 +70,15 @@ function projects(){
     p.textContent = 'Welp. You only got ' + correctCount + ' right';
 }
 
+    var totalGuesses = 3;
 
+function favoriteProject(){
+    var favoriteProject = prompt('Which project do you think was my favorite to work on? Cat Lady Monument, Letterpress Poster, or Lobby Chair?');
+    console.log('User guess of my favorite project', favoriteProject);
+
+    var p = document.getElementById('favorite-guess');
+
+    
+
+}
 
