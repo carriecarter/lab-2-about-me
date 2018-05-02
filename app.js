@@ -74,36 +74,31 @@ function projects(){
 
 // Start of Guessing Game    
 function favoriteProject(){
-var guess = 3;
+    console.log('guessing game is running');
+    var correctAnswer = 'Cat Lady Monument';
+//setup
+//what variables transcend loop?
+    var answer;
+    var correct = false;
 
-   for (var i = 0; i < 3; i++) {
-         var  favGuess = prompt ('Which project do you think was my favorite to work on? Cat Lady Monument, Letterpress Poster, or Lobby Chair?');
-         console.log('guess one is' + favGuess);
-    
-        if(favGuess.trim().toLowerCase() === 'Cat Lady Monument' || favGuess.trim().toLowerCase() === 'Cat Lady') {
-    
-            alert('You know me well. Who doesn\'t love controversial public art? Especially when it is about cats.');
+//loop for guesses
+    for(var i = 0; i < 3; i++) {
+        console.log('guesses remaining', i);
+        answer= prompt('What do you think my favorite project was? Cat Lady Monument, Letterpress Poster, or Lobby Chair?');
+        console.log('user guessed', answer);
+
+        if(answer === correctAnswer) {
+            correct = true;
+            alert('Long Live Crazy Cat Ladies!');
             break;
         }
         else {
-            guesses--;
-            confirm('Nope. Sorry, that was not my favorite project. You have ' + guesses + ' left');
-            wrongGuess();
+            alert('nope. not that one. Guesses remaining: ' + (2 - i) );
         }
     }
-}
+} 
 
 
 
 
 
-// Start of Guessing Game DEMO    
-function favoriteProject(){
-    console.log('game is running');
-
-    //Setup- what variables transcend the loop?
-    var answer;
-    var correct = false;
-    
-      
-}   
