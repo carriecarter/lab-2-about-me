@@ -71,34 +71,39 @@ function projects(){
     }
     p.textContent = 'You got ' + correctCount + ' out of 5 right';
 }
-// Start of Guessing Game
-function correctGuess() {
-    var p = document.getElementById('favorite-guess');
-    p.textContent = 'You must know me well at this point! Cat Lady FTW!';
-    }
-    
-    function wrongGuess() {
-    var p = document.getElementById('favorite-guess');
-    p.textContent = 'Nope. Sorry, that was not my favorite.';
-    }
-    
-function favoriteProject(){
-    var guess = 3;
 
-   for(var guesses = 0; guesses < 3; guesses++) {
+// Start of Guessing Game    
+function favoriteProject(){
+var guess = 3;
+
+   for (var i = 0; i < 3; i++) {
          var  favGuess = prompt ('Which project do you think was my favorite to work on? Cat Lady Monument, Letterpress Poster, or Lobby Chair?');
          console.log('guess one is' + favGuess);
     
-    if(favGuess.trim().toLowerCase() === 'Cat Lady Monument' || favGuess.trim().toLowerCase() === 'Cat Lady') {
+        if(favGuess.trim().toLowerCase() === 'Cat Lady Monument' || favGuess.trim().toLowerCase() === 'Cat Lady') {
     
-        alert('You know me well. Who doesn\'t love controversial public art? Especially when it is about cats.');
-        correctAnswers++;
-        break;
+            alert('You know me well. Who doesn\'t love controversial public art? Especially when it is about cats.');
+            break;
+        }
+        else {
+            guesses--;
+            confirm('Nope. Sorry, that was not my favorite project. You have ' + guesses + ' left');
+            wrongGuess();
+        }
     }
-    else {
-        guesses--;
-        confirm('Nope. Sorry, that was not my favorite project. You have ' + guesses + ' left');
-        guessWrong();
-    }
-   }
 }
+
+
+
+
+
+// Start of Guessing Game DEMO    
+function favoriteProject(){
+    console.log('game is running');
+
+    //Setup- what variables transcend the loop?
+    var answer;
+    var correct = false;
+    
+      
+}   
