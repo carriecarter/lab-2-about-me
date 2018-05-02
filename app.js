@@ -75,20 +75,20 @@ function projects(){
 // Start of Guessing Game    
 function favoriteProject(){
     console.log('guessing game is running');
-    var correctAnswer = 'Cat Lady Monument';
+    var correctAnswer = ['cat lady monument' , 'cat lady' , 'monument' , 'cl' ];
 //setup
 //what variables transcend loop?
     var answer;
-    var correct = false;
+    //var correct = false;
 
 //loop for guesses
     for(var i = 0; i < 3; i++) {
         console.log('guesses remaining', i);
+
         answer= prompt('What do you think my favorite project was? Cat Lady Monument, Letterpress Poster, or Lobby Chair?');
         console.log('user guessed', answer);
 
-        if(answer === correctAnswer) {
-            correct = true;
+        if(correctAnswer.indexOf()) {
             alert('Long Live Crazy Cat Ladies!');
             break;
         }
