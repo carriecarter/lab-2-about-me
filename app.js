@@ -96,7 +96,7 @@ function favoriteProject(){
         }
         else {
             alert('nope. not that one. Guesses remaining: ' + (2 - i) );
-            p.textContent = ('you guessed ' + answer + ' sorry! WRONG'); 
+            p.textContent = ('you guessed ' + answer + ' sorry, but that was not my favorite project. CAT LADIES FTW!'); 
         }
     }
 } 
