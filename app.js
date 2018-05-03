@@ -75,11 +75,11 @@ function projects(){
 // Start of Guessing Game    
 function favoriteProject(){
     console.log('guessing game is running');
-    var correctAnswer = ['cat lady monument' , 'cat lady' , 'monument' , 'cl' ];
+    var correctAnswer = 'cat lady monument';
 //setup
 //what variables transcend loop?
     var answer;
-    //var correct = false;
+    var correct = false;
 
 //loop for guesses
     for(var i = 0; i < 3; i++) {
@@ -87,13 +87,16 @@ function favoriteProject(){
 
         answer= prompt('What do you think my favorite project was? Cat Lady Monument, Letterpress Poster, or Lobby Chair?');
         console.log('user guessed', answer);
-
-        if(correctAnswer.indexOf()) {
+        var p = document.getElementById('favorite-guess');
+        if(answer.trim().toLowerCase() === correctAnswer || answer.trim().toLowerCase() === 'cl') {
+            correct = true;
             alert('Long Live Crazy Cat Ladies!');
+            p.textContent = ('you guessed ' + answer + ' good work');
             break;
         }
         else {
             alert('nope. not that one. Guesses remaining: ' + (2 - i) );
+            p.textContent = ('you guessed ' + answer + ' sorry! WRONG'); 
         }
     }
 } 
